@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BATMAN ES UNA MARCA REGISTRADA DE DC COMICS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-VU-khF">
-                                <rect key="frame" x="16" y="623.5" width="343" height="13.5"/>
+                                <rect key="frame" x="40.5" y="623.5" width="294.5" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,9 +40,7 @@
                             <constraint firstItem="R6q-XF-C4j" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0u6-Nh-odH"/>
                             <constraint firstItem="R6q-XF-C4j" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Bvt-Wc-kn0"/>
                             <constraint firstItem="jYv-VU-khF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qpg-bi-q1o"/>
-                            <constraint firstItem="jYv-VU-khF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="RFC-2D-yVj"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jYv-VU-khF" secondAttribute="bottom" constant="30" id="cjA-Wj-Y1Y"/>
-                            <constraint firstAttribute="trailing" secondItem="jYv-VU-khF" secondAttribute="trailing" constant="16" id="qgk-Em-0pN"/>
                         </constraints>
                     </view>
                 </viewController>
