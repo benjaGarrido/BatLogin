@@ -43,6 +43,10 @@
                             <constraint firstItem="hwS-Rv-Xmp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZEv-R3-6FA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgLogoBatman" destination="hwS-Rv-Xmp" id="ow2-jy-fsE"/>
+                        <outlet property="lblInstructions" destination="sJQ-qO-knN" id="y5V-up-Twj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +55,7 @@
         <!--View Controller-->
         <scene sceneID="xSm-xo-qEC">
             <objects>
-                <viewController id="XwI-Ts-PDe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="XwI-Ts-PDe" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSy-Km-Pr0"/>
                         <viewControllerLayoutGuide type="bottom" id="0N4-Bj-Dm4"/>
