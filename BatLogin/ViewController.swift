@@ -32,8 +32,38 @@ class ViewController: UIViewController {
         }
     }
     
-    func handle(pan: UIGestureRecognizer){
-        
+    func handle(pan: UIPanGestureRecognizer) {
+        let speed : CGFloat = 2.0
+        switch pan.state {
+        case .began:
+            //Cuando comenzamos el paneo (en estado activo pero sin movimiento)
+            viewAnimator.pauseAnimation()
+        case .changed:
+            //Cuando estamos moviendo el dedo
+            let translation = pan.translation(in: pan.view).y / speed
+            viewAnimator.fractionComplete = translation / 100
+            if viewAnimator.fractionComplete >= 0.99 {
+                buildAnimation()
+            }
+        default:
+            break
+        }
+    }
+    
+    func buildAnimation() {
+        let logoAnimator = UIViewPropertyAnimator(duration: 0.5, curve: .easeIn) { 
+            self.imgLogoBatman.transform = CGAffineTransform(scaleX: 25.0, y: 25.0)
+        }
+        logoAnimator.startAnimation()
+        //Cargamos el segundo ViewController que era LoginViewController
+        logoAnimator.addCompletion { (UIViewAnimatingPosition) in
+            self.beginApp()
+        }
+    }
+    
+    func beginApp() {
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+        self.present(loginViewController!, animated: true, completion: nil)
     }
     
 }
