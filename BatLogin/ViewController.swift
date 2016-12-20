@@ -12,16 +12,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgLogoBatman: UIImageView!
     @IBOutlet weak var lblInstructions: UILabel!
     
+    var viewAnimator : UIViewPropertyAnimator!
+    private let unlockGesture = UIPanGestureRecognizer()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        unlockGesture.addTarget(self, action: #selector(handle(pan:)))
+        self.view.addGestureRecognizer(unlockGesture)
+        
+        viewAnimator = UIViewPropertyAnimator(duration: 1.0, curve: .easeInOut, animations: nil)
+        viewAnimator.addAnimations {
+            self.lblInstructions.layer.opacity = 0
+            self.imgLogoBatman.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func handle(pan: UIGestureRecognizer){
+        
     }
-
-
+    
 }
 
