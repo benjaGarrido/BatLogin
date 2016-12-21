@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="xSm-xo-qEC">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="XwI-Ts-PDe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="XwI-Ts-PDe" customClass="LoginViewController" customModule="BatLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSy-Km-Pr0"/>
                         <viewControllerLayoutGuide type="bottom" id="0N4-Bj-Dm4"/>
@@ -143,6 +143,15 @@
                             <constraint firstItem="uha-A9-mJk" firstAttribute="leading" secondItem="Af1-lx-bYL" secondAttribute="leading" id="zAa-Dz-Lo5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnEntrar" destination="Jwt-rr-3y1" id="uJc-ms-vV9"/>
+                        <outlet property="imgBatLogin" destination="anV-gc-3Gr" id="PVt-RH-PrN"/>
+                        <outlet property="imgLogoBatman" destination="mn7-1N-rdD" id="98T-1E-RVI"/>
+                        <outlet property="lblPassword" destination="uha-A9-mJk" id="EH5-kA-zDm"/>
+                        <outlet property="lblUsuario" destination="ROS-oL-A00" id="itw-Ot-7sl"/>
+                        <outlet property="txtPassword" destination="Af1-lx-bYL" id="Wx6-Eu-Oir"/>
+                        <outlet property="txtUsuario" destination="R19-dc-Vg7" id="C3i-qu-WhB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BB-Ky-jlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
